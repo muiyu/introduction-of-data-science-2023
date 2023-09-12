@@ -1,1 +1,1 @@
-print("Hello world.")
+print("姓名：郭力维\n学号：10225501439")
