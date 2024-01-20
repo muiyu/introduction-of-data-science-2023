@@ -1,0 +1,24 @@
+includes:
+  - base.yaml
+random_seed: 128
+model:
+  model_name: iMoLDGNN
+  gnn_type: GIN
+ood:
+  ood_alg: iMoLD
+  ood_param: 1.0
+  extra_param:
+    - 0.01
+    - 0.5
+  num_e: 4000
+  commitment_weight: 0.1
+  gamma: 0.5
+train:
+  max_epoch: 200
+  lr: 0.0001
+  pre_train: 50
+  mile_stones:
+    - 300
+  weight_decay: 0.0001
+log_file: exp_0
+clean_save: true

@@ -1,0 +1,19 @@
+includes:
+  - base.yaml
+pipeline: GALAPipeline
+con_model: ERM
+model:
+  model_name: GALAvGIN
+ood:
+  ood_alg: GALA
+  ood_param: 0.6
+  extra_param:
+    - 4
+    - 1
+train:
+  max_epoch: 200
+  train_bs: 32
+  lr: 0.0001
+  weight_decay: 0.0001
+log_file: exp_0
+clean_save: true
